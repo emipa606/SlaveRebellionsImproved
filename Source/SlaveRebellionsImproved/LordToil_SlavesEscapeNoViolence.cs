@@ -16,10 +16,10 @@ public class LordToil_SlavesEscapeNoViolence(IntVec3 dest) : LordToil_Travel(des
 
     public override void UpdateAllDuties()
     {
-        var lordToilData_Travel = Data;
+        var lordToilDataTravel = Data;
         foreach (var pawn in lord.ownedPawns)
         {
-            pawn.mindState.duty = new PawnDuty(DefOfClass.SlaveEscapeNoViolence, lordToilData_Travel.dest);
+            pawn.mindState.duty = new PawnDuty(DefOfClass.SlaveEscapeNoViolence, lordToilDataTravel.dest);
         }
     }
 

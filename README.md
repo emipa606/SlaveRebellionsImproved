@@ -1,11 +1,13 @@
-# [Slave Rebellions Improved (Continued)]()
+# [Slave Rebellions Improved (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=3259932217)
 
 ![Image](https://i.imgur.com/buuPQel.png)
+
 Update of busted_bunnys mod https://steamcommunity.com/sharedfiles/filedetails/?id=2601801303
 
 ![Image](https://i.imgur.com/pufA0kM.png)
 	
 ![Image](https://i.imgur.com/Z4GOv8H.png)
+
 *Brand new rebellion experience awaits. No more random and absurd rebellions. Slaves shouldn't be dumber than rocks. Slave owners should get what they deserve.* 
 
 Slave Rebellions Improved brings you completely rewritten generation of slave rebellions, adds new AI behaviour and makes slave rebellions more predictable and random free.
@@ -32,26 +34,26 @@ Everything else should be completely compatible.
 # Bugs and suggestions
 
 Feel free to post any suggestions in comments on how to make this mod better.
-If you encounter any errors related to this mod or notice bugs, please post bug reports in [https://steamcommunity.com/workshop/filedetails/discussion/2601801303/3040481812853763962/](bug reports section). [u]**Bug reports in comments will be ignored!**[/u]
+If you encounter any errors related to this mod or notice bugs, please post bug reports ~~in [bug reports section](https://steamcommunity.com/workshop/filedetails/discussion/2601801303/3040481812853763962/).~~ <ins>**Bug reports in comments will be ignored!**</ins>
 
 
-[https://discord.gg/7befJWr9xS]![Image]((https://i.imgur.com/cfoFEMA.png))
+[![Image](https://i.imgur.com/cfoFEMA.png)](https://discord.gg/7befJWr9xS)
 
 Credits:
 BIG WIK - commisioner of this mod.
 
-For those who wish to contribute to my BioTech DLC purchase.
-[https://boosty.to/bustedbunny] ![Image]((https://steamuserimages-a.akamaihd.net/ugc/1893226588885225061/74CC48E04ABA85EFEC132A71B213DF25A6411A23/?imw=5000&amp;imh=5000&amp;ima=fit&amp;imcolor=#000000&amp;letterbox=false) )
-
 ![Image](https://i.imgur.com/PwoNOj4.png)
+
 
 
 -  See if the the error persists if you just have this mod and its requirements active.
 -  If not, try adding your other mods until it happens again.
--  Post your error-log using [https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] or the standalone [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404](Uploader) and command Ctrl+F12
+-  Post your error-log using [HugsLib](https://steamcommunity.com/workshop/filedetails/?id=818773962) or the standalone [Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404) and command Ctrl+F12
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
--  Use [https://github.com/RimSort/RimSort/releases/latest](RimSort) to sort your mods
+-  Use [RimSort](https://github.com/RimSort/RimSort/releases/latest) to sort your mods
 
+ 
 
+[![Image](https://img.shields.io/github/v/release/emipa606/SlaveRebellionsImproved?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/3259932217) | tags:  ai,  behaviour

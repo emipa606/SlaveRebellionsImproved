@@ -6,7 +6,7 @@ using Verse;
 namespace SlaveRebellionsImproved.HarmonyPatches;
 
 [HarmonyPatch(typeof(Alert_SlaveRebellionLikely), nameof(Alert_SlaveRebellionLikely.GetReport))]
-public static class Alert_SlaveRebellionLikelyPatch
+public static class Alert_SlaveRebellionLikely_GetReport
 {
     public static bool Prefix(ref AlertReport __result)
     {
@@ -20,7 +20,7 @@ public static class Alert_SlaveRebellionLikelyPatch
         var list = new List<Pawn>();
         foreach (var item in currentMap.mapPawns.SlavesOfColonySpawned)
         {
-            if (MTBMeetsRebelliousThreshold(SlaveRebellionUtility.InitiateSlaveRebellionMtbDays(item)))
+            if (mtbMeetsRebelliousThreshold(SlaveRebellionUtility.InitiateSlaveRebellionMtbDays(item)))
             {
                 list.Add(item);
             }
@@ -36,7 +36,7 @@ public static class Alert_SlaveRebellionLikelyPatch
         return false;
     }
 
-    private static bool MTBMeetsRebelliousThreshold(float mtb)
+    private static bool mtbMeetsRebelliousThreshold(float mtb)
     {
         if (15f > mtb)
         {

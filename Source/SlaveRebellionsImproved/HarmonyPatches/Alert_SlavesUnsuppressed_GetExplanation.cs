@@ -5,7 +5,7 @@ using Verse;
 namespace SlaveRebellionsImproved.HarmonyPatches;
 
 [HarmonyPatch(typeof(Alert_SlavesUnsuppressed), nameof(Alert_SlavesUnsuppressed.GetExplanation))]
-public static class Alert_SlavesUnsuppressedPatch
+public static class Alert_SlavesUnsuppressed_GetExplanation
 {
     public static bool Prefix(ref TaggedString __result, Alert_SlavesUnsuppressed __instance)
     {

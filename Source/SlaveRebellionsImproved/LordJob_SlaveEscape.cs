@@ -33,24 +33,24 @@ internal class LordJob_SlaveEscape : LordJob
             maxDanger = Danger.Deadly,
             useAvoidGrid = true
         });
-        var lordToil_SlavesEscapeNoViolence = new LordToil_SlavesEscapeNoViolence(exitPoint);
-        stateGraph.AddToil(lordToil_SlavesEscapeNoViolence);
-        var lordToil_ExitMap = new LordToil_ExitMap(LocomotionUrgency.Jog, true);
-        stateGraph.AddToil(lordToil_ExitMap);
-        var lordToil_ExitMap2 = new LordToil_ExitMap(LocomotionUrgency.Jog)
+        var lordToilSlavesEscapeNoViolence = new LordToil_SlavesEscapeNoViolence(exitPoint);
+        stateGraph.AddToil(lordToilSlavesEscapeNoViolence);
+        var lordToilExitMap = new LordToil_ExitMap(LocomotionUrgency.Jog, true);
+        stateGraph.AddToil(lordToilExitMap);
+        var lordToilExitMap2 = new LordToil_ExitMap(LocomotionUrgency.Jog)
         {
             useAvoidGrid = true
         };
-        stateGraph.AddToil(lordToil_ExitMap2);
-        var transition = new Transition(firstSource, lordToil_SlavesEscapeNoViolence);
+        stateGraph.AddToil(lordToilExitMap2);
+        var transition = new Transition(firstSource, lordToilSlavesEscapeNoViolence);
         transition.AddTrigger(new Trigger_Memo("TravelArrived"));
         stateGraph.AddTransition(transition);
-        var transition2 = new Transition(lordToil_SlavesEscapeNoViolence, lordToil_ExitMap);
-        transition2.AddSource(lordToil_ExitMap2);
+        var transition2 = new Transition(lordToilSlavesEscapeNoViolence, lordToilExitMap);
+        transition2.AddSource(lordToilExitMap2);
         transition2.AddTrigger(new Trigger_PawnCannotReachMapEdge());
         stateGraph.AddTransition(transition2);
-        var transition3 = new Transition(lordToil_ExitMap, lordToil_ExitMap2);
-        transition3.AddSource(lordToil_SlavesEscapeNoViolence);
+        var transition3 = new Transition(lordToilExitMap, lordToilExitMap2);
+        transition3.AddSource(lordToilSlavesEscapeNoViolence);
         transition3.AddTrigger(new Trigger_PawnCanReachMapEdge());
         stateGraph.AddTransition(transition3);
         return stateGraph;

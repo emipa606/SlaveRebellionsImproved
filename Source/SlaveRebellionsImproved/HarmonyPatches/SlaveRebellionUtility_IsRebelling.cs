@@ -17,7 +17,7 @@ public static class SlaveRebellionUtility_IsRebelling
     {
         var codes = new List<CodeInstruction>(instructions);
         var label = il.DefineLabel();
-        codes[codes.Count - 1].labels.Add(label);
+        codes[^1].labels.Add(label);
         for (var i = 0; i < codes.Count; i++)
         {
             if (i < codes.Count - 3 && codes[i].opcode == OpCodes.Ldnull)

@@ -9,8 +9,8 @@ public static class SlaveRebellionUtility_CanParticipateInSlaveRebellion
 {
     public static void Postfix(ref bool __result, Pawn pawn)
     {
-        var need_Suppression = pawn.needs.TryGetNeed<Need_Suppression>();
-        if (need_Suppression != null && need_Suppression.CurLevelPercentage > SlaveMod.Instance.Settings.rebellionMin)
+        var needSuppression = pawn.needs.TryGetNeed<Need_Suppression>();
+        if (needSuppression != null && needSuppression.CurLevelPercentage > SlaveMod.Instance.Settings.RebellionMin)
         {
             __result = false;
         }

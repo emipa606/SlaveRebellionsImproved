@@ -53,7 +53,7 @@ public class SlaveRebellionUtility_StartSlaveRebellion
         var list = new List<Pawn>();
         foreach (var pawn in slavesOfColonySpawned)
         {
-            if (pawn != initiator && OriginalCanParticipateInSlaveRebellion(pawn))
+            if (pawn != initiator && originalCanParticipateInSlaveRebellion(pawn))
             {
                 list.Add(pawn);
             }
@@ -72,7 +72,7 @@ public class SlaveRebellionUtility_StartSlaveRebellion
                 {
                     var need_Suppression = pawn.needs.TryGetNeed<Need_Suppression>();
                     if (need_Suppression != null &&
-                        need_Suppression.CurLevelPercentage < SlaveMod.Instance.Settings.rebellionLoyal)
+                        need_Suppression.CurLevelPercentage < SlaveMod.Instance.Settings.RebellionLoyal)
                     {
                         ___rebellingSlaves.Add(pawn);
                     }
@@ -103,13 +103,8 @@ public class SlaveRebellionUtility_StartSlaveRebellion
             slaveRebellionType = SlaveRebellionType.GrandRebellion;
         }
 
-        if (!RCellFinder.TryFindRandomExitSpot(initiator, out var spot, TraverseMode.PassDoors))
-        {
-            __result = false;
-            return false;
-        }
-
-        if (!PrisonBreakUtility.TryFindGroupUpLoc(___rebellingSlaves, spot, out var groupUpLoc))
+        if (!RCellFinder.TryFindRandomExitSpot(initiator, out var spot, TraverseMode.PassDoors) ||
+            !PrisonBreakUtility.TryFindGroupUpLoc(___rebellingSlaves, spot, out var groupUpLoc))
         {
             __result = false;
             return false;
@@ -124,7 +119,7 @@ public class SlaveRebellionUtility_StartSlaveRebellion
         {
             if (initiator.Map.mapPawns.FreeColonistsSpawnedCount < 3)
             {
-                isAggressive = CanApplyWeaponFactor(initiator);
+                isAggressive = canApplyWeaponFactor(initiator);
             }
         }
         else
@@ -132,7 +127,7 @@ public class SlaveRebellionUtility_StartSlaveRebellion
             var num = 0;
             foreach (var pawn in ___rebellingSlaves)
             {
-                num += CanApplyWeaponFactor(pawn) ? 1 : 0;
+                num += canApplyWeaponFactor(pawn) ? 1 : 0;
             }
 
             if (num > initiator.Map.mapPawns.FreeColonistsSpawnedCount * 0.4)
@@ -238,7 +233,7 @@ public class SlaveRebellionUtility_StartSlaveRebellion
         return false;
     }
 
-    private static bool OriginalCanParticipateInSlaveRebellion(Pawn pawn)
+    private static bool originalCanParticipateInSlaveRebellion(Pawn pawn)
     {
         if (!pawn.Downed && pawn.Spawned && pawn.IsSlave && !pawn.InMentalState && pawn.Awake())
         {
@@ -248,18 +243,18 @@ public class SlaveRebellionUtility_StartSlaveRebellion
         return false;
     }
 
-    private static bool CanApplyWeaponFactor(Pawn pawn)
+    private static bool canApplyWeaponFactor(Pawn pawn)
     {
         var primary = pawn.equipment.Primary;
         if (primary == null || !primary.def.IsWeapon || !SlaveRebellionUtility.WeaponUsableInRebellion(primary))
         {
-            return GoodWeaponInSameRoom(pawn);
+            return goodWeaponInSameRoom(pawn);
         }
 
         return true;
     }
 
-    private static bool GoodWeaponInSameRoom(Pawn pawn)
+    private static bool goodWeaponInSameRoom(Pawn pawn)
     {
         var room = pawn.GetRoom();
         if (room == null || room.PsychologicallyOutdoors)

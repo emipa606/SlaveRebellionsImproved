@@ -8,6 +8,7 @@
     <li>1.3</li>
     <li>1.4</li>
     <li>1.5</li>
+    <li>1.6</li>
   </supportedVersions>
   <modDependencies>
     <li>
@@ -64,16 +65,13 @@ Everything else should be completely compatible.
 
 [h1]Bugs and suggestions[/h1]
 Feel free to post any suggestions in comments on how to make this mod better.
-If you encounter any errors related to this mod or notice bugs, please post bug reports in [url=https://steamcommunity.com/workshop/filedetails/discussion/2601801303/3040481812853763962/]bug reports section[/url]. [u][b]Bug reports in comments will be ignored![/b][/u]
+If you encounter any errors related to this mod or notice bugs, please post bug reports [strike]in [url=https://steamcommunity.com/workshop/filedetails/discussion/2601801303/3040481812853763962/]bug reports section[/url].[/strike] [u][b]Bug reports in comments will be ignored![/b][/u]
 
 
 [url=https://discord.gg/7befJWr9xS][img]https://i.imgur.com/cfoFEMA.png[/img][/url]
 
 Credits:
 BIG WIK - commisioner of this mod.
-
-For those who wish to contribute to my BioTech DLC purchase.
-[url=https://boosty.to/bustedbunny] [img]https://steamuserimages-a.akamaihd.net/ugc/1893226588885225061/74CC48E04ABA85EFEC132A71B213DF25A6411A23/?imw=5000&amp;amp;imh=5000&amp;amp;ima=fit&amp;amp;imcolor=#000000&amp;amp;letterbox=false[/img] [/url]
 
 [img]https://i.imgur.com/PwoNOj4.png[/img]
 [list]
@@ -84,6 +82,8 @@ For those who wish to contribute to my BioTech DLC purchase.
 [*] Do not report errors by making a discussion-thread, I get no notification of that.
 [*] If you have the solution for a problem, please post it to the GitHub repository.
 [*] Use [url=https://github.com/RimSort/RimSort/releases/latest]RimSort[/url] to sort your mods
-[/list]</description>
-  <modVersion IgnoreIfNoMatchingField="True">1.5.0</modVersion>
+[/list] 
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3259932217][img]https://img.shields.io/github/v/release/emipa606/SlaveRebellionsImproved?label=latest%20version&amp;style=plastic&amp;color=9f1111&amp;labelColor=black[/img][/url] | tags:  ai,  behaviour</description>
+  <modVersion IgnoreIfNoMatchingField="True">1.6.0</modVersion>
 </ModMetaData>

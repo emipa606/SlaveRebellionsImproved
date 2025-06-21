@@ -21,34 +21,34 @@ public class SlaveMod : Mod
 
     public override void DoSettingsWindowContents(Rect inRect)
     {
-        var listing_Standard = new Listing_Standard();
-        listing_Standard.Begin(inRect);
-        listing_Standard.Label("MinSupressionLabel".Translate());
-        listing_Standard.Label("CurrentValueForSlaves".Translate(Math.Round(Settings.rebellionMin * 100f, 2)));
-        Settings.rebellionMin = listing_Standard.Slider(Settings.rebellionMin, 0f, 1f);
-        if (Settings.rebellionLoyal < Settings.rebellionMin)
+        var listingStandard = new Listing_Standard();
+        listingStandard.Begin(inRect);
+        listingStandard.Label("MinSupressionLabel".Translate());
+        listingStandard.Label("CurrentValueForSlaves".Translate(Math.Round(Settings.RebellionMin * 100f, 2)));
+        Settings.RebellionMin = listingStandard.Slider(Settings.RebellionMin, 0f, 1f);
+        if (Settings.RebellionLoyal < Settings.RebellionMin)
         {
-            Settings.rebellionLoyal = Settings.rebellionMin;
+            Settings.RebellionLoyal = Settings.RebellionMin;
         }
 
-        listing_Standard.Label("LoyalSupressionLabel".Translate());
-        listing_Standard.Label("CurrentValueForSlaves".Translate(Math.Round(Settings.rebellionLoyal * 100f, 2)));
-        Settings.rebellionLoyal = listing_Standard.Slider(Settings.rebellionLoyal, Settings.rebellionMin, 1f);
-        if (listing_Standard.ButtonText("SlaveDefaultValues".Translate()))
+        listingStandard.Label("LoyalSupressionLabel".Translate());
+        listingStandard.Label("CurrentValueForSlaves".Translate(Math.Round(Settings.RebellionLoyal * 100f, 2)));
+        Settings.RebellionLoyal = listingStandard.Slider(Settings.RebellionLoyal, Settings.RebellionMin, 1f);
+        if (listingStandard.ButtonText("SlaveDefaultValues".Translate()))
         {
-            Settings.rebellionMin = 0.6f;
-            Settings.rebellionLoyal = 0.8f;
+            Settings.RebellionMin = 0.6f;
+            Settings.RebellionLoyal = 0.8f;
         }
 
         if (currentVersion != null)
         {
-            listing_Standard.Gap();
+            listingStandard.Gap();
             GUI.contentColor = Color.gray;
-            listing_Standard.Label("SRI.CurrentModVersion".Translate(currentVersion));
+            listingStandard.Label("SRI.CurrentModVersion".Translate(currentVersion));
             GUI.contentColor = Color.white;
         }
 
-        listing_Standard.End();
+        listingStandard.End();
         base.DoSettingsWindowContents(inRect);
     }
 
