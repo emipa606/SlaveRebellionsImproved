@@ -9,6 +9,7 @@
     <li>1.4</li>
     <li>1.5</li>
     <li>1.6</li>
+    <li>1.7</li>
   </supportedVersions>
   <modDependencies>
     <li>
@@ -27,21 +28,21 @@
     <li>brrainz.harmony</li>
     <li>Ludeon.Rimworld.Ideology</li>
   </loadAfter>
-  <description>[img]https://i.imgur.com/buuPQel.png[/img]
+  <description>[img]https://img.litet.net/logos/Info.png[/img]
 Update of busted_bunnys mod https://steamcommunity.com/sharedfiles/filedetails/?id=2601801303
 
-[img]https://i.imgur.com/pufA0kM.png[/img]
+[img]https://img.litet.net/logos/Notice.png[/img]
 
 [table]
-    [tr][td][url=https://dsc.gg/mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td] [td][url=https://github.com/emipa606/SlaveRebellionsImproved][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
+    [tr][td][url=https://discord.gg/h5TY6DA][img]https://img.litet.net/logos/Discord.png[/img][/url][/td] [td][url=https://github.com/emipa606/SlaveRebellionsImproved][img]https://img.litet.net/logos/Github.png[/img][/url][/td]
     [/tr]
     [tr]
-        [td][img]https://i.imgur.com/WjDSfUn.png[/img][/td]
-        [td][img]https://i.imgur.com/h5VwTNL.png[/img][/td]
+        [td][img]https://img.litet.net/logos/SafeToAdd.png[/img][/td]
+        [td][img]https://img.litet.net/logos/SafeToRemove.png[/img][/td]
     [/tr]
 [/table]
 	
-[img]https://i.imgur.com/Z4GOv8H.png[/img]
+[img]https://img.litet.net/logos/OriginalDescription.png[/img]
 [i]Brand new rebellion experience awaits. No more random and absurd rebellions. Slaves shouldn't be dumber than rocks. Slave owners should get what they deserve.[/i] 
 
 Slave Rebellions Improved brings you completely rewritten generation of slave rebellions, adds new AI behaviour and makes slave rebellions more predictable and random free.
@@ -68,22 +69,22 @@ Feel free to post any suggestions in comments on how to make this mod better.
 If you encounter any errors related to this mod or notice bugs, please post bug reports [strike]in [url=https://steamcommunity.com/workshop/filedetails/discussion/2601801303/3040481812853763962/]bug reports section[/url].[/strike] [u][b]Bug reports in comments will be ignored![/b][/u]
 
 
-[url=https://discord.gg/7befJWr9xS][img]https://i.imgur.com/cfoFEMA.png[/img][/url]
+[url=https://discord.gg/7befJWr9xS][img]https://img.litet.net/cfoFEMA.png[/img][/url]
 
 Credits:
 BIG WIK - commisioner of this mod.
 
-[img]https://i.imgur.com/PwoNOj4.png[/img]
+[img]https://img.litet.net/logos/ReportingIssues.png[/img]
 [list]
 [*] See if the the error persists if you just have this mod and its requirements active.
 [*] If not, try adding your other mods until it happens again.
-[*] Post your error-log using [url=https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] or the standalone [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404]Uploader[/url] and command Ctrl+F12
+[*] Always post your log using the [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404]Log Uploader[/url]
 [*] For best support, please use the Discord-channel for error-reporting.
 [*] Do not report errors by making a discussion-thread, I get no notification of that.
 [*] If you have the solution for a problem, please post it to the GitHub repository.
 [*] Use [url=https://github.com/RimSort/RimSort/releases/latest]RimSort[/url] to sort your mods
 [/list] 
 
-[url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3259932217][img]https://img.shields.io/github/v/release/emipa606/SlaveRebellionsImproved?label=latest%20version&amp;style=plastic&amp;color=9f1111&amp;labelColor=black[/img][/url] | tags:  ai,  behaviour</description>
-  <modVersion IgnoreIfNoMatchingField="True">1.6.0</modVersion>
+[url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3259932217][img]https://img.shields.io/github/v/release/emipa606/SlaveRebellionsImproved?label=latest%20version&amp;style=plastic&amp;color=9f1111&amp;labelColor=black[/img][/url] | ai, behaviour</description>
+  <modVersion IgnoreIfNoMatchingField="True">1.7.0</modVersion>
 </ModMetaData>

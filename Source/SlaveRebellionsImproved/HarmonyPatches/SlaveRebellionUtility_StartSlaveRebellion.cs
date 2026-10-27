@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using HarmonyLib;
 using RimWorld;
 using Verse;
@@ -42,21 +43,17 @@ public class SlaveRebellionUtility_StartSlaveRebellion
         ___rebellingSlaves.Add(initiator);
         ___allPossibleRebellingSlaves.Clear();
         var slavesOfColonySpawned = initiator.Map.mapPawns.SlavesOfColonySpawned;
-        foreach (var pawn in slavesOfColonySpawned)
+        foreach (var pawn in slavesOfColonySpawned.Where(pawn =>
+                     pawn != initiator && SlaveRebellionUtility.CanParticipateInSlaveRebellion(pawn)))
         {
-            if (pawn != initiator && SlaveRebellionUtility.CanParticipateInSlaveRebellion(pawn))
-            {
-                ___allPossibleRebellingSlaves.Add(pawn);
-            }
+            ___allPossibleRebellingSlaves.Add(pawn);
         }
 
         var list = new List<Pawn>();
-        foreach (var pawn in slavesOfColonySpawned)
+        foreach (var pawn in slavesOfColonySpawned.Where(pawn =>
+                     pawn != initiator && originalCanParticipateInSlaveRebellion(pawn)))
         {
-            if (pawn != initiator && originalCanParticipateInSlaveRebellion(pawn))
-            {
-                list.Add(pawn);
-            }
+            list.Add(pawn);
         }
 
         var count = ___allPossibleRebellingSlaves.Count;

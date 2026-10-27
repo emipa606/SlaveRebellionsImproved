@@ -12,7 +12,7 @@ public static class SlaveRebellionUtility_IsRebelling
 {
     private static readonly MethodInfo lordJob = AccessTools.PropertyGetter(typeof(Lord), nameof(Lord.LordJob));
 
-    private static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions,
+    public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions,
         ILGenerator il)
     {
         var codes = new List<CodeInstruction>(instructions);

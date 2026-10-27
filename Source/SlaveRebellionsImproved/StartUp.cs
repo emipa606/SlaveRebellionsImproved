@@ -5,7 +5,7 @@ using Verse;
 namespace SlaveRebellionsImproved;
 
 [StaticConstructorOnStartup]
-internal class StartUp
+internal static class StartUp
 {
     static StartUp()
     {

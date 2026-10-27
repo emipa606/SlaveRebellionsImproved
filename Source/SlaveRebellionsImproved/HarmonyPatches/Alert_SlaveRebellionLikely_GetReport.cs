@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using HarmonyLib;
 using RimWorld;
 using Verse;
@@ -18,12 +19,10 @@ public static class Alert_SlaveRebellionLikely_GetReport
         }
 
         var list = new List<Pawn>();
-        foreach (var item in currentMap.mapPawns.SlavesOfColonySpawned)
+        foreach (var item in currentMap.mapPawns.SlavesOfColonySpawned.Where(pawn =>
+                     mtbMeetsRebelliousThreshold(SlaveRebellionUtility.InitiateSlaveRebellionMtbDays(pawn))))
         {
-            if (mtbMeetsRebelliousThreshold(SlaveRebellionUtility.InitiateSlaveRebellionMtbDays(item)))
-            {
-                list.Add(item);
-            }
+            list.Add(item);
         }
 
         if (list.Count < 1)

@@ -4,7 +4,7 @@ using Verse.AI;
 namespace SlaveRebellionsImproved;
 
 [DefOf]
-public class DefOfClass
+public static class DefOfClass
 {
     public static DutyDef SlaveEscapeNoViolence;
 
